@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Restaurant Booking System</h1>
+<p>Book a place</p>
+
+{% if msg is not None %}
+<div class="alert alert-danger">{{ msg }}</div>
+{% endif %}
+
+{% endblock content %}

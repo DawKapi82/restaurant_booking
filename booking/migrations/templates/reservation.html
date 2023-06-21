@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action="/booking/add_reservation" method="post">
+    {% csrf_token %}
+    <div class="m-3">
+    {{ form }}
+    </div>
+    <div class="m-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>
+
+{% endblock content %}

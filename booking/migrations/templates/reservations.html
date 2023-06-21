@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<table class="table table-striped">
+<tr>
+    <th scope="col">user</th>
+    <th scope="col">name </th>
+    <th scope="col">surname</th>
+    <th scope="col">phone</th>
+    <th scope="col">reservation_date </th>
+    <th scope="col">table_count</th>
+    <th scope="col"></th>
+</tr>
+{% for r in reservations %}
+    <tr>
+    <td>{{ r.user }}</td>
+    <td>{{ r.name }}</td>
+    <td>{{ r.surname }}</td>
+    <td>{{ r.phone }}</td>
+    <td>{{ r.reservation_date }}</td>
+    <td>{{ r.table_count }}</td>
+        <td><a class="btn btn-outline-danger btn-sm" href="/booking/delete/{{ r.id }}">Delete</a></td>
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock content %}
